@@ -1,5 +1,0 @@
-funcionarios = []
-
-function cadastrar(){
-    
-}
