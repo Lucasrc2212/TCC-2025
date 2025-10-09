@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Cadastro de Produtos — Layout</title>
+  <style>
+    :root{
+      --bg:#f4f6fb;
+      --card:#ffffff;
+      --accent:#4f46e5;
+      --muted:#6b7280;
+      --glass: rgba(255,255,255,0.6);
+      --radius:12px;
+      font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0;background:linear-gradient(180deg,var(--bg),#eef2ff);color:#111827}
+
+    .app{
+      max-width:1100px;
+      margin:40px auto;
+      padding:24px;
+      display:grid;
+      grid-template-columns:260px 1fr;
+      gap:20px;
+      align-items:start;
+    }
+
+    /* SIDEBAR */
+    .sidebar{
+      background:var(--card);
+      border-radius:var(--radius);
+      padding:20px;
+      box-shadow:0 6px 18px rgba(15,23,42,0.06);
+      height:fit-content;
+    }
+    .brand{display:flex;gap:12px;align-items:center}
+    .logo{width:44px;height:44px;background:linear-gradient(135deg,var(--accent),#06b6d4);border-radius:10px;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700}
+    .brand h1{font-size:16px;margin:0}
+    .nav{margin-top:18px}
+    .nav a{display:block;padding:10px 12px;border-radius:8px;color:var(--muted);text-decoration:none;margin-bottom:6px}
+    .nav a.active{background:linear-gradient(90deg, rgba(79,70,229,0.08), rgba(6,182,212,0.04));color:var(--accent);font-weight:600}
+
+    /* MAIN */
+    .main{
+      background:var(--card);
+      border-radius:var(--radius);
+      padding:20px;
+      box-shadow:0 6px 18px rgba(15,23,42,0.06);
+    }
+    .header-row{display:flex;justify-content:space-between;align-items:center;margin-bottom:18px}
+    .header-row h2{margin:0}
+    .search{display:flex;gap:8px;align-items:center}
+    .search input{padding:8px 12px;border-radius:8px;border:1px solid #e6e9ef;background:var(--glass)}
+
+    /* FORM */
+    .card-form{background:linear-gradient(180deg,#fff, #fbfdff);padding:18px;border-radius:10px;border:1px solid rgba(16,24,40,0.03);margin-bottom:18px}
+    .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+    label{font-size:13px;color:var(--muted);display:block;margin-bottom:6px}
+    input[type="text"], input[type="number"], textarea, select{
+      width:100%;padding:10px;border-radius:8px;border:1px solid #e6e9ef;background:transparent;font-size:14px
+    }
+    textarea{min-height:78px;resize:vertical}
+    .full{grid-column:1/-1}
+    .actions{display:flex;gap:8px;justify-content:flex-end;margin-top:12px}
+    .btn{padding:10px 14px;border-radius:10px;border:0;cursor:pointer}
+    .btn.primary{background:var(--accent);color:#fff}
+    .btn.ghost{background:transparent;border:1px solid #e6e9ef}
+
+    /* PRODUCTS LIST */
+    .list{
+      display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:12px
+    }
+    .product{
+      background:linear-gradient(180deg,#fff,#fcfdff);padding:12px;border-radius:10px;border:1px solid rgba(16,24,40,0.03);display:flex;gap:10px;align-items:flex-start
+    }
+    .thumb{width:64px;height:64px;border-radius:8px;background:#f3f4f6;display:flex;align-items:center;justify-content:center;color:var(--muted);font-weight:600}
+    .meta{flex:1}
+    .meta h3{margin:0;font-size:15px}
+    .meta p{margin:6px 0 0 0;color:var(--muted);font-size:13px}
+    .price{font-weight:700;color:var(--accent);font-size:14px}
+
+    /* Responsive */
+    @media (max-width:900px){
+      .app{grid-template-columns:1fr; padding:16px}
+      .grid{grid-template-columns:1fr}
+    }
+  </style>
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="logo">P</div>
+        <div>
+          <h1>ProdutoPro</h1>
+          <small style="color:var(--muted)">Gerencie seus produtos</small>
+        </div>
+      </div>
+
+      <nav class="nav">
+        <a href="#" class="active">Cadastro</a>
+        <a href="#">Estoque</a>
+        <a href="#">Categorias</a>
+        <a href="#">Relatórios</a>
+        <a href="#">Configurações</a>
+      </nav>
+
+      <div style="margin-top:18px;color:var(--muted);font-size:13px">
+        <strong>Empresa:</strong>
+        <div>Acme S/A</div>
+      </div>
+    </aside>
+
+    <main class="main">
+      <div class="header-row">
+        <h2>Cadastro de Produtos</h2>
+        <div class="search">
+          <input placeholder="Pesquisar produto..."/>
+          <button class="btn ghost">Buscar</button>
+        </div>
+      </div>
+
+      <section class="card-form">
+        <form>
+          <div class="grid">
+            <div>
+              <label for="nome">Nome do produto</label>
+              <input id="nome" type="text" placeholder="Ex: Parafuso 3x10" />
+            </div>
+
+            <div>
+              <label for="sku">SKU / Código</label>
+              <input id="sku" type="text" placeholder="Ex: ACME-PF-001" />
+            </div>
+
+            <div>
+              <label for="categoria">Categoria</label>
+              <select id="categoria">
+                <option>Ferramentas</option>
+                <option>Peças</option>
+                <option>Equipamentos</option>
+              </select>
+            </div>
+
+            <div>
+              <label for="quantidade">Quantidade</label>
+              <input id="quantidade" type="number" min="0" value="0" />
+            </div>
+
+            <div>
+              <label for="preco">Preço (R$)</label>
+              <input id="preco" type="number" step="0.01" min="0" />
+            </div>
+
+            <div>
+              <label for="imagem">URL da imagem</label>
+              <input id="imagem" type="text" placeholder="https://..." />
+            </div>
+
+            <div class="full">
+              <label for="descricao">Descrição</label>
+              <textarea id="descricao" placeholder="Descrição curta do produto"></textarea>
+            </div>
+          </div>
+
+          <div class="actions">
+            <button type="button" class="btn ghost">Limpar</button>
+            <button type="button" class="btn primary">Salvar produto</button>
+          </div>
+        </form>
+      </section>
+
+      <section>
+        <h3 style="margin-top:0">Produtos cadastrados (exemplo)</h3>
+        <div class="list">
+          <article class="product">
+            <div class="thumb">IMG</div>
+            <div class="meta">
+              <h3>Parafuso 3x10</h3>
+              <p>SKU: ACME-PF-001 • Ferramentas</p>
+            </div>
+            <div class="price">R$ 0,45</div>
+          </article>
+
+          <article class="product">
+            <div class="thumb">IMG</div>
+            <div class="meta">
+              <h3>Motor Elétrico 220V</h3>
+              <p>SKU: ACME-ME-022 • Equipamentos</p>
+            </div>
+            <div class="price">R$ 320,00</div>
+          </article>
+
+          <article class="product">
+            <div class="thumb">IMG</div>
+            <div class="meta">
+              <h3>Porca 5/16</h3>
+              <p>SKU: ACME-PN-005 • Peças</p>
+            </div>
+            <div class="price">R$ 0,30</div>
+          </article>
+
+        </div>
+      </section>
+
+    </main>
+  </div>
+</body>
+</html>
