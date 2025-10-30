@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS/agenda.css">
+    <script src="../JS/agenda.js" defer></script>
+    <title>Nuvra</title>
+</head>
+<body>
+    <header>
+        <div>
+            <h2>Agenda</h2>
+            <p>Agende e organize seus compromissos:</p>
+        </div>
+    </header>
+    <main>
+        <div class="agendados">
+            <h3>Próximos compromissos:</h3>
+            <div id="card-container">
+
+            </div>
+        </div>
+        <div class="agendar">
+            <h3>Novo agendamento</h3>
+            <div class="info">
+                <Label><b>Data</b></Label>
+                <input id="data" type="date">
+
+                <Label><b>Hora</b></Label>
+                <input id="hora" type="time">
+
+                <Label><b>Serviço</b></Label>
+                <input id="servico" type="text">
+
+                <Label><b>Descrição</b></Label>
+                <textarea placeholder="Descreva seu compromisso" id="descricao" type="text"></textarea>
+            </div>
+            <div class="envio">
+                <button onclick="enviar()">Enviar</button>
+                <button onclick="apagar()">Apagar</button>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
