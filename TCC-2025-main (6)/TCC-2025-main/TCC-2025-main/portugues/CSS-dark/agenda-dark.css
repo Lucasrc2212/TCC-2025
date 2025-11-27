@@ -1,0 +1,303 @@
+/* ======== Estilos gerais ======== */
+body {
+  font-family: 'Lucida Sans', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  background-color: #12171F; /* Fundo dark */
+  margin: 0;
+  padding: 0;
+  color: #E4E7EB;
+}
+
+/* ======== Cabeçalho ======== */
+header {
+  position: relative;          
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #1C2A3A; /* Azul escuro */
+  color: #E4E7EB;
+  padding: 18px 40px;
+  width: 100%;
+  height: 150px;
+}
+
+header h2 {
+  font-size: 45px;
+  margin: 0;
+}
+
+header p {
+  font-size: 15px;
+  margin: 0;
+  text-align: center;
+  color: #A5ACB8;
+}
+
+/* ======== Conteúdo principal ======== */
+main {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 40px;
+  flex-wrap: wrap;
+  margin: 50px auto;
+  width: 90%;
+  max-width: 1200px;
+}
+
+/* ======== Caixa de listagem ======== */
+.agendados {
+  flex: 1;
+  min-width: 380px;
+  max-width: 500px;
+  background-color: #1E242E; /* Card escuro */
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.agendados h3 {
+  margin-bottom: 20px;
+  color: #E4E7EB;
+}
+
+.agendados input {
+  padding: 6px;
+  margin-right: 6px;
+  border: 1px solid #2A3240;
+  background-color: #161B22;
+  border-radius: 5px;
+  color: #E4E7EB;
+}
+
+.agendados input:focus {
+  border-color: #4DA3FF;
+  outline: none;
+  box-shadow: 0 0 4px rgba(77,163,255,0.4);
+}
+
+.agendados button {
+  padding: 6px 12px;
+  border: none;
+  border-radius: 5px;
+  background-color: #2B3A55;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.agendados button:hover {
+  background-color: #3A4F70;
+}
+
+/* ======== Caixa de agendamento ======== */
+.agendar {
+  flex: 1;
+  min-width: 380px;
+  max-width: 500px;
+  background-color: #1E242E;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+  display: flex;
+  flex-direction: column;
+}
+
+.agendar h3 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #E4E7EB;
+}
+
+/* Campos */
+.agendar label {
+  color: #E4E7EB;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.agendar input,
+.agendar textarea {
+  margin-top: 5px;
+  padding: 8px;
+  border: 1px solid #2A3240;
+  background-color: #161B22;
+  border-radius: 5px;
+  color: #E4E7EB;
+  width: 100%;
+}
+
+.agendar input:focus,
+.agendar textarea:focus {
+  border-color: #4DA3FF;
+  outline: none;
+  box-shadow: 0 0 5px rgba(77,163,255,0.4);
+}
+
+/* ======== Botões ======== */
+.envio {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.envio button {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #2B3A55;
+  color: white;
+  transition: background-color 0.2s ease;
+}
+
+.envio button:hover {
+  background-color: #3A4F70;
+}
+
+/* ======== Cards ======== */
+#card-container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.card {
+  display: flex;
+  align-items: center;
+  background-color: #1E242E;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.4);
+  padding: 15px 20px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.6);
+}
+
+.card .hora {
+  color: #E4E7EB;
+  font-weight: bold;
+  font-size: 18px;
+  margin-right: 20px;
+  min-width: 70px;
+  text-align: center;
+  background-color: #243042;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.card .conteudo {
+  display: flex;
+  flex-direction: column;
+}
+
+.card h4 {
+  margin: 0;
+  color: #E4E7EB;
+}
+
+.card p {
+  margin: 3px 0;
+  color: #B0B7C3;
+}
+
+.card small {
+  color: #8A93A2;
+}
+
+/* Botão remover */
+.card .remover {
+  margin-left: auto;
+  background-color: #265585;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 12px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.card .remover:hover {
+  background-color: #0d55a1;
+  transform: translateY(-2px);
+}
+
+/* ======== Bem-vindo ======== */
+#bemVindo {
+  font-size: 30px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  color: #E4E7EB;
+}
+
+#bemVindo p {
+  margin: 6px 0 0 0;
+  font-size: 18px;
+  color: #A5ACB8;
+}
+
+/* ======== Header buttons ======== */
+.header-right {
+  display: flex;
+  align-items: center;
+}
+
+.opcoes {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.btn {
+  display: inline-block;
+  text-decoration: none;
+  padding: 8px 14px;
+  border-radius: 8px;
+  background: #2B3A55;
+  color: #fff;
+  font-weight: 600;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.4);
+  transition: transform .15s ease, background .15s ease;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  background: #364763;
+}
+
+/* ======== Responsividade ======== */
+@media (max-width: 780px) {
+  header {
+    padding: 14px 16px;
+  }
+
+  #bemVindo {
+    position: static;
+    transform: none;
+    margin-left: 10px;
+  }
+
+  header {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .header-right {
+    margin-left: auto;
+  }
+
+  .opcoes {
+    gap: 8px;
+  }
+}

@@ -1,0 +1,171 @@
+body {
+    margin: 0;
+    background-color: #12171F; /* fundo dark */
+    font-family: Arial, sans-serif;
+    color: #E4E7EB;
+}
+
+header {
+    position: relative;          
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #1C2A3A; /* azul escuro */
+    color: #E4E7EB;
+    padding: 18px 40px;
+    height: 130px;
+}
+
+header h1 {
+    font-size: 45px;
+    margin: 0;
+}
+
+header p {
+    font-size: 20px;
+    margin: 0;
+    text-align: center;
+    color: #A5ACB8;
+}
+
+#bemVindo {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    color: #E4E7EB;
+}
+
+/* Botões do header */
+.header-right {
+    flex: 0 0 auto;
+    display: flex;
+    align-items: center;
+}
+
+.opcoes {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.btn {
+    display: inline-block;
+    text-decoration: none;
+    padding: 8px 14px;
+    border-radius: 8px;
+    background: #2B3A55; /* azul suave */
+    color: #fff;
+    font-weight: 600;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.35);
+    transition: transform .15s ease, background .15s ease;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    background: #364763;
+}
+
+/* ======== Conteúdo ======== */
+.info {
+    width: 90%;
+    max-width: 1100px;
+    margin: 30px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+/* Caixa gastos */
+.gastos {
+    display: flex;
+    justify-content: space-between;
+    background: #1E242E; /* card dark */
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.35);
+}
+
+.valor h1 {
+    font-size: 40px;
+    color: #E4E7EB;
+}
+
+.valor p {
+    opacity: 0.8;
+}
+
+.media_sal {
+    text-align: right;
+}
+
+.media_sal h2 {
+    font-size: 28px;
+    margin-top: 4px;
+    color: #A5ACB8;
+}
+
+/* Controle despesas */
+.control_des {
+    background: #1E242E;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.35);
+    overflow-x: auto;
+}
+
+/* ======== Tabela ======== */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    color: #E4E7EB;
+}
+
+thead {
+    background: #243042; /* header tabela */
+    color: white;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+}
+
+tbody tr:nth-child(even) {
+    background: #161B22; /* linha alternada dark */
+}
+
+tbody tr:nth-child(odd) {
+    background: #1C222C;
+}
+
+tbody tr:hover {
+    background: #223041;
+}
+
+.valor_pro, .valor_funci,
+.quant_pro, .quant_funci {
+    font-weight: 600;
+    color: #4DA3FF; /* destaque azul claro */
+}
+
+/* ======== Responsividade ======== */
+@media (max-width: 780px) {
+    .gastos {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+
+    header {
+        flex-direction: column;
+        gap: 15px;
+        height: auto;
+    }
+
+    .header-right .opcoes {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
