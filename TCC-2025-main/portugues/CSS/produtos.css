@@ -1,0 +1,319 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+
+header {
+   position: relative;          
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #2c3e50;
+  color: white;
+  padding: 18px 40px;
+  box-sizing: border-box;
+  width: 100%;
+  height: 130px;
+}
+
+header h1 {
+  font-size: 45px;
+  margin: 0;
+}
+
+header p {
+ font-size: 20px;
+  margin: 0;
+  text-align: center;
+}
+
+
+main {
+  background-color: #e0e0e0;
+  min-height: 100vh;
+  padding: 40px 0;
+}
+
+
+#cadastro {
+    color: #2c3e50;
+  background-color: #fff;
+  width: 60%;
+  margin: 0 auto;
+  padding: 30px 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+
+
+#topo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+#topo label {
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+
+#topo div {
+  display: flex;
+  align-items: center;
+}
+
+
+#topo input[type="text"] {
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-right: none; 
+  border-radius: 25px 0 0 25px;
+  outline: none;
+  width: 230px;
+  font-size: 0.95rem;
+  transition: all 0.2s ease;
+}
+
+#topo input[type="text"]:focus {
+  border-color: #2c3e50;
+  box-shadow: 0 0 4px rgba(44, 62, 80, 0.3);
+}
+
+
+#topo button {
+  padding: 10px 18px;
+  border: 1px solid #2c3e50;
+  border-left: none;
+  background-color: #2c3e50;
+  color: white;
+  border-radius: 0 25px 25px 0;
+  cursor: pointer;
+  font-size: 0.95rem;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+#topo button:hover {
+  background-color: #34495e;
+}
+
+#topo button:active {
+  transform: scale(0.97);
+}
+
+
+#entrada {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+#entrada label {
+  font-weight: bold;
+}
+
+#entrada input {
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  width: 100%; 
+}
+
+#saida {
+  width: 60%;
+  margin: 40px auto;
+}
+
+#saida h2 {
+  font-size: 1.4rem;
+  margin-bottom: 15px;
+}
+.search-bar {
+  display: flex;
+  align-items: center;
+}
+
+.search-bar input[type="text"] {
+  padding: 10px 15px;
+  border: 1px solid #ccc;
+  border-right: none;
+  border-radius: 25px 0 0 25px;
+  outline: none;
+  width: 250px;
+  font-size: 0.95rem;
+  transition: all 0.2s ease;
+}
+
+.search-bar input[type="text"]:focus {
+  border-color: #2c3e50;
+  box-shadow: 0 0 4px rgba(44, 62, 80, 0.3);
+}
+
+.search-bar button {
+  background-color: #2c3e50;
+  border: 1px solid #2c3e50;
+  border-radius: 0 25px 25px 0;
+  padding: 10px 15px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.search-bar button:hover {
+  background-color: #34495e;
+}
+
+.search-bar button:active {
+  transform: scale(0.97);
+}
+
+.search-bar button i {
+  color: white;
+  font-size: 1rem;
+}
+.cadastrar{
+    cursor: pointer;
+    padding: 12px;
+    background-color: #ebebeb;
+    border: 1px #ebebeb solid;
+    transition: 0.5s;
+    border-radius: 5px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.cadastrar:hover{
+        transform: translateY(-3px);
+        box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+h2{
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    color: #2c3e50;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  }
+.cards_produtos{
+  height: 280px;
+    margin-left: 70px;
+    padding: 20px;
+    display: flex;
+    .card{
+        margin: 10px;
+        padding: 20px;
+        background-color: white;
+        border: 1px solid white;
+        border-radius: 12px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        cursor: pointer;
+        transition: 0.5s;
+        width: 220px;
+        button{
+            font-size: 13px;
+            padding: 5px;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            color: #2c3e50;
+            margin-top: 10px;
+        
+          }
+        p{
+          margin-bottom: 8px;
+        }
+        h3{
+          margin-bottom: 15px;
+          font-size: 30px;
+          color: #2c3e50;
+          font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+    }
+    .card:hover{
+          box-shadow: 0 4px 8px rgba(0,0,0,0.4);
+        }
+}
+
+
+.card {
+  transition: all 0.3s ease;
+}
+
+.card.destaque {
+  border: 3px solid #4CAF50;
+  box-shadow: 0 0 15px rgba(76, 175, 80, 0.6);
+  transform: scale(1.05);
+}
+
+#bemVindo {
+  font-size: 30px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  pointer-events: none; 
+}
+#bemVindo p {
+  margin: 6px 0 0 0;
+  font-size: 18px;
+  color: #f0f4f8;
+}
+
+.header-right {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+}
+
+
+.opcoes {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.btn {
+  display: inline-block;
+  text-decoration: none;
+  padding: 8px 14px;
+  border-radius: 8px;
+  background: #265585;
+  color: #fff;
+  font-weight: 600;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+  transition: transform .15s ease, background .15s ease;
+}
+.btn:hover {
+  transform: translateY(-2px);
+  background: #0d55a1;
+}
+
+/* responsividade: em telas menores, centralizamos verticalmente e empilhamos um pouco */
+@media (max-width: 780px) {
+  header {
+    padding: 14px 16px;
+  }
+
+  #bemVindo {
+    
+    position: static;
+    transform: none;
+    margin-left: 10px;
+    pointer-events: auto;
+  }
+  header {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .header-right {
+    margin-left: auto;
+  }
+  .opcoes {
+    gap: 8px;
+  }
+}
