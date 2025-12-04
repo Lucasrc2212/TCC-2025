@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS/inicio.css">
+    <script src="../JS/inicio.js" defer></script>
+    <title>Nuvra</title>
+</head>
+<body>
+    <header>
+         <div id="bemVindo">
+         <p>Escolha uma ferramenta abaixo:</p>
+         </div>
+
+  <div class="header-right">
+    <div class="opcoes">
+      <a class="btn" href="login.html">Login</a>
+      <a class="btn" href="cadastro.html">Cadastre</a>
+    </div>
+  </div>
+  <div class="theme-toggle">
+    <button id="themeBtn"><a href="../HTML-dark/inicio-dark.html">🌓 Tema</a></button>
+</div>
+
+    </header>
+    <main>
+        <div class="card" onclick="funcionarios()">
+            <h2>👥 Funcionários</h2>
+            <p>Gerencie os funcionários da empresa</p>
+        </div>
+        <div class="card" onclick="clientes()">
+            <h2>🧑‍💼 Clientes</h2>
+            <p>Cadastre e acompanhe seus clientes</p>
+        </div>
+        <div class="card" onclick="produtos()">
+            <h2>📦 Produtos</h2>
+            <p>Controle o estoque</p>
+        </div>
+        <div class="card" onclick="agenda()">
+            <h2>📅 Agenda</h2>
+            <p>Organize reuniões e compromissos</p>
+        </div>
+        <div class="card" onclick="despesas()">
+            <h2>🧮 Despesas</h2>
+            <p>Cuide e analise suas despezas</p>
+        </div>
+        
+    </main>
+    <div class="resumo">
+        <h1>Visão geral:</h1>
+        <div class="dash-card">
+        <div class="card" onclick="funcionarios()">
+            <h2>👥 Funcionários</h2>
+            <p id="quantidade_funci">0 Funcionários</p>
+        </div>
+        <div class="card" onclick="clientes()">
+            <h2>🧑‍💼 Clientes</h2>
+            <p id="quantidade_clientes">0 Clientes</p>
+        </div>
+        <div class="card" onclick="produtos()">
+            <h2>📦 Produtos</h2>
+            <p id="quantidade_produtos">0 Produtos</p>
+        </div>
+        <div class="card" onclick="agenda()">
+            <h2>📅 Agenda</h2>
+            <p id="quantidadeCompromissos">0 Compromissos</p>
+        </div>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2025 - Seu Gerenciador de Empresas</p>
+    </footer>
+</body>
+</html>
